@@ -9,40 +9,7 @@ import (
 	"skiplist/skiplist"
 )
 
-type TestInter interface {
-	print()
-	set(v int)
-}
-
-type TestStruct struct {
-	Data int
-}
-
-func (ts *TestStruct) print() {
-	fmt.Println(ts.Data)
-}
-
-func (ts *TestStruct) set(v int) {
-	ts.Data = v
-}
-
-func printf(inter TestInter) {
-	inter.print()
-}
-
-func setf(inter TestInter, v int) {
-	inter.set(v)
-	inter.print()
-}
-
 func main() {
-	//testStruct := new(TestStruct)
-	//testStruct.print()
-	//printf(&testStruct)
-	//
-	//setf(&testStruct, 89)
-	//testStruct.print()
-
 	sl := skiplist.New()
 	var action int
 	var key int
